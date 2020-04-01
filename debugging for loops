@@ -24,14 +24,14 @@ def get_summoner_matches(api: str) -> list:
     #         list_of_summoner_ids.append(list_of_files[x][y]['summonerId'])
     return []
     
-    def get_summoner_ids(api: str, region: str, summoner_name: str) -> list:
+def get_summoner_ids(api: str, region: str, summoner_name: str) -> list:
     url = f'https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api}'
     file = requests.get(url).json()
     id = file['id']
     accountId = file['accountId']
     return [id, accountId]
     
-    if __name__ == '__main__':
+ if __name__ == '__main__':
     # api = str(input('Enter API key: '))
     region = str('na1')
     api = str('RGAPI-6574075e-0cdc-4489-9b6f-fe12bbac689d')
