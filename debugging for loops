@@ -1,3 +1,6 @@
+import requests
+from typing import Tuple
+import random
 def get_summoner_matches(api: str) -> list:
     tiers = ['DIAMOND', 'PLATINUM', 'GOLD', 'SILVER', 'BRONZE', 'IRON']
     divisions = ['I', 'II', 'III', 'IV']
